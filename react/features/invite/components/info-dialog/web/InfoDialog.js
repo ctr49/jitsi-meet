@@ -320,6 +320,7 @@ class InfoDialog extends Component<Props, State> {
         const { _localParticipantName, liveStreamViewURL, t } = this.props;
         const _inviteURL = _decodeRoomURI(this.props._inviteURL);
         const supportLink = interfaceConfig.SUPPORT_URL;
+        const displaySupportLink = interfaceConfig.DISPLAY_SUPPORT_URL_IN_INVITATION;
 
         let invite = _localParticipantName
             ? t('info.inviteURLFirstPartPersonal', { name: _localParticipantName })
@@ -353,7 +354,7 @@ class InfoDialog extends Component<Props, State> {
             invite = `${invite}\n${dial}\n${moreNumbers}`;
         }
 
-        if (supportLink) {
+        if (displaySupportLink && supportLink) {
             const msg = t('info.inviteSupportMsg', {
                 url: supportLink
             });

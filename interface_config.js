@@ -33,6 +33,7 @@ var interfaceConfig = {
     PROVIDER_NAME: 'Jitsi',
     LANG_DETECTION: true, // Allow i18n to detect the system language
     INVITATION_POWERED_BY: true,
+    DISPLAY_SUPPORT_URL_IN_INVITATION: true,
 
     /**
      * If we should show authentication block in profile
